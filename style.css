@@ -8,10 +8,10 @@
 
 /* <uniquifier>: Use a unique and descriptive class name */
 .outfit-uniquifier {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .staatliches-regular {
@@ -20,8 +20,7 @@
   font-style: normal;
 }
 
-
-body{
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,152 +31,155 @@ body{
   background-color: #000000ee;
 }
 
-
-.container{
-    background-color: #f8e7ef;
-    width: 50%;
-    padding: 3%;
-    border-radius: 40px;
-    box-shadow: rgba(0, 0, 0, 0.76) 0px 0px 10px;
-    margin: 2%;
+.container {
+  background-color: #f8e7ef;
+  width: 50%;
+  padding: 3%;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.76) 0px 0px 10px;
+  margin: 2%;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1%;
-    padding: 2%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1%;
+  padding: 2%;
 }
 
-main{
-    display: flex;
-    justify-content: center;
+main {
+  display: flex;
+  justify-content: center;
 }
 
-article{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 2%;
+article {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2%;
 }
 
-p, li{
-    font-family: "Outfit", sans-serif;
-
+p,
+li {
+  font-family: "Outfit", sans-serif;
 }
 
-h1{
-    font-family: "Staatliches", sans-serif;
-    font-size: 95px;
-    color: #6B0B31;
+h1 {
+  font-family: "Staatliches", sans-serif;
+  font-size: 95px;
+  color: #6b0b31;
 }
 
-h2{
-    font-family: "Outfit", sans-serif;
-    color: #6B0B31;
-    margin-top: 20px;
+h2 {
+  font-family: "Outfit", sans-serif;
+  color: #6b0b31;
+  margin-top: 20px;
 }
 
-h3{
-    font-family: "Outfit", sans-serif;
-    color: #000000;
+h3 {
+  font-family: "Outfit", sans-serif;
+  color: #000000;
 }
 
-header img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
 
-  ul {
-    list-style-type: none; /* Remove os pontos */
-    padding: 0;           /* Opcional: remove o recuo esquerdo padrão */
-    margin: 0;            /* Opcional: remove a margem padrão */
-  }
-
-  li::before {
-    content: "- "; /* O traço e um espaço */
-    margin-right: 5px; /* Espaço entre o traço e o texto */
-  }
-
-hr{
-    border-top: 2px solid #6B0B31; /* Define espessura, tipo e cor */
-border: none;
+ul {
+  list-style-type: none; /* Remove os pontos */
+  padding: 0; /* Opcional: remove o recuo esquerdo padrão */
+  margin: 0; /* Opcional: remove a margem padrão */
 }
 
-#stars{
+li::before {
+  content: "- "; /* O traço e um espaço */
+  margin-right: 5px; /* Espaço entre o traço e o texto */
+}
+
+hr {
+  border-top: 2px solid #6b0b31; /* Define espessura, tipo e cor */
+  border: none;
+}
+
+#stars {
   position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.cursor-glow{
+.cursor-glow {
   position: fixed;
-  width:120px;
-  height:120px;
-  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
-  border-radius:50%;
-  pointer-events:none;
-  transform:translate(-50%,-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
-.card{
-  width:50%;
-  aspect-ratio: 3 / 4; 
+.card {
+  width: 50%;
+  aspect-ratio: 3 / 4;
   perspective: 2000px;
 }
 
-.card-inner{
-  position:relative;
-  width:100%;
-  height:100%;
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
-  transition: transform 1.1s cubic-bezier(.4,.2,.2,1);
+  transition: transform 1.1s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.card.flip .card-inner{
+.card.flip .card-inner {
   transform: rotateY(180deg);
 }
 
 .card-front,
-.card-back{
-  position:absolute;
-  width:100%;
-  height:100%;
-  backface-visibility:hidden;
-  border-radius:40px;
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 40px;
 }
 
-.card-front{
-  overflow:hidden;
-  cursor:pointer;
+.card-front {
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.card-front img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:40px;
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
 }
 
-.card-back{
-  transform:rotateY(180deg);
-  height:auto;
+.card-back {
+  transform: rotateY(180deg);
+  height: auto;
 }
 
-.card-back .container{
-  width:100%;
+.card-back .container {
+  width: 100%;
 }
 
-.click-hint{
+.click-hint {
   position: fixed;
   top: calc(50% + 300px); /* posiciona abaixo da carta */
   left: 50%;
   transform: translateX(-50%);
-  
+
   padding: 10px 18px;
 
   font-family: "Outfit", sans-serif;
@@ -199,13 +201,19 @@ border: none;
   z-index: 9999;
 }
 
-@keyframes hintPulse{
-  0%{opacity:0.10;}
-  50%{opacity:0.90;}
-  100%{opacity:0.10;}
+@keyframes hintPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.1;
+  }
 }
 
-#music-btn{
+#music-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -218,7 +226,7 @@ border: none;
 
   font-size: 20px;
 
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: white;
 
   backdrop-filter: blur(6px);
