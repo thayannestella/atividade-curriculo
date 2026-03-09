@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+.outfit-uniquifier {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.staatliches-regular {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+
+  background-color: #000000ee;
+}
+
+
+.container{
+    background-color: aliceblue;
+    width: 50%;
+    padding: 3%;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.76) 0px 0px 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2%;
+}
+
+p, li{
+    font-family: "Outfit", sans-serif;
+
+}
+
+h1{
+    font-family: "Staatliches", sans-serif;
+    font-size: 95px;
+    color: #562C73;
+}
+
+h2{
+    font-family: "Outfit", sans-serif;
+    color: #562C73;
+    margin-top: 20px;
+}
+
+h3{
+    font-family: "Outfit", sans-serif;
+    color: #000000;
+}
+
+header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+  ul {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0;           /* Opcional: remove o recuo esquerdo padrão */
+    margin: 0;            /* Opcional: remove a margem padrão */
+  }
+
+  li::before {
+    content: "- "; /* O traço e um espaço */
+    margin-right: 5px; /* Espaço entre o traço e o texto */
+  }
+
+hr{
+    border-top: 2px solid #562C73; /* Define espessura, tipo e cor */
+
+}
+
+#stars{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.cursor-glow{
+  position: fixed;
+  width:120px;
+  height:120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+}
