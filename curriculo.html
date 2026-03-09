@@ -17,7 +17,19 @@
     />
   </head>
   <body>
-    <div class="container">
+
+    <div class="click-hint">clique na carta</div>
+<div class="card" id="card">
+  <div class="card-inner">
+
+    <!-- FRENTE -->
+    <div class="card-front">
+      <img src="frente.jpg" alt="Carta Amy">
+    </div>
+
+    <!-- VERSO -->
+    <div class="card-back">
+      <div class="container">
       <header>
         <h1>Thayanne Stella</h1>
         <img
@@ -156,12 +168,22 @@
           </ul>
         </article>
       </main>
+          </div>
+
     </div>
+  </div>
+</div>
 
     <div class="sparkles"></div>
 
     <canvas id="stars"></canvas>
 <div class="cursor-glow"></div>
+
+<div id="player" style="display:none;"></div>
+
+<button id="music-btn">⏸</button>
+
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
 const canvas = document.getElementById("stars")
@@ -237,6 +259,52 @@ window.addEventListener("resize",()=>{
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 })
+
+const card = document.getElementById("card")
+const hint = document.querySelector(".click-hint")
+
+card.addEventListener("click", () => {
+  card.classList.toggle("flip")
+  hint.style.display = "none"
+})
+
+let player
+let playing = true
+
+function onYouTubeIframeAPIReady(){
+  player = new YT.Player('player', {
+    height: '0',
+    width: '0',
+    videoId: 'Cvqr4ASn7QQ',
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      loop: 1,
+      playlist: 'Cvqr4ASn7QQ'
+    },
+    events: {
+      onReady: function(event){
+        event.target.setVolume(10) // volume em 20%
+      }
+    }
+  })
+}
+
+const btn = document.getElementById("music-btn")
+
+btn.addEventListener("click", () => {
+
+  if(playing){
+    player.pauseVideo()
+    btn.textContent = "▶"
+  }else{
+    player.playVideo()
+    btn.textContent = "⏸"
+  }
+
+  playing = !playing
+})
+
 </script>
   </body>
 </html>
